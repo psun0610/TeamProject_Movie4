@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+{% for movie in movies %}
+<a href="{% url 'movies:detail' movie.pk %}"><button type="button"
+        class="btn btn-outline-dark w-100 my-3">{{movie.title}}</button></a>
+<br>
+
+
+{% endfor %}
+
+
+{% endblock %}

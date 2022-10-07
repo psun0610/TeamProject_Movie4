@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{{ movie.created_at }}
+{{ movie.updated_at }}
+{{ movie.title }}
+{{ movie.movie_name }}
+{{ movie.content }}
+<a href="{% url 'movies:update' movie.pk %}">리뷰수정하기</a>
+<a href="{% url 'movies:delete' movie.pk %}">리뷰삭제하기</a>
+
+{% endblock %}

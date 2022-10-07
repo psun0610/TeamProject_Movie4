@@ -64,18 +64,19 @@ def next(request, pk):
     pklist = []
     for m in movies:
         pklist.append(m.pk)
-    large = max(pklist)
     nextpk = movie.pk
+    small = min(pklist)
     while 1:
-        nextpk += 1
+        nextpk -= 1
         # 1번 조건
-        # 마지막 pk값보다 커지면 break
-        if nextpk > large:
+        # nextpk가 1보다 작아지면
+        if nextpk < small:
             return redirect("movies:detail", movie.pk)
         # 2번 조건
-        # 지금 pk값에서 1을 더해서 만약에 있으면 값을 저장하고 종료
+        # 지금 pk값에서 1을 빼서 만약에 있으면 값을 저장하고 종료
         elif nextpk in pklist:
             return redirect("movies:detail", nextpk)
+
 
 def prev(request, pk):
     movies = Movie.objects.order_by('-pk')
@@ -83,15 +84,15 @@ def prev(request, pk):
     pklist = []
     for m in movies:
         pklist.append(m.pk)
+    large = max(pklist)
     prevpk = movie.pk
-    small = min(pklist)
     while 1:
-        prevpk -= 1
+        prevpk += 1
         # 1번 조건
-        # prevpk가 1보다 작아지면
-        if prevpk < small:
+        # 마지막 pk값보다 커지면 break
+        if prevpk > large:
             return redirect("movies:detail", movie.pk)
         # 2번 조건
-        # 지금 pk값에서 1을 빼서 만약에 있으면 값을 저장하고 종료
+        # 지금 pk값에서 1을 더해서 만약에 있으면 값을 저장하고 종료
         elif prevpk in pklist:
             return redirect("movies:detail", prevpk)

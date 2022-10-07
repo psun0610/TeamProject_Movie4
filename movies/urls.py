@@ -10,4 +10,6 @@ urlpatterns = [
     path('<int:pk>', views.detail, name='detail'),
     path('<int:pk>/update/', views.update, name='update'),
     path('<int:pk>/delete/', views.delete, name='delete'),
+    path('<int:pk>/next', views.next, name='next'),
+    path('<int:pk>/prev', views.prev, name='prev'),
 ]

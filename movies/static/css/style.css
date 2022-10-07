@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap');
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.body {
+  background-color: rgb(244, 242, 246);
+}
+
+.main-body {
+  min-height: 100vh;
+  background: linear-gradient(217deg, rgba(176, 112, 210, 0.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(62, 32, 151, 0.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(238, 221, 255, 0.8), rgba(77, 77, 77, 0) 70.71%);
+}
+
+.logo {
+font-size: 10rem;
+font-weight: 900;
+color: rgb(19, 7, 55);
+margin: 0;
+}
+
+.main-button {
+  text-decoration: none;
+}
+
+.main-button>div {
+  padding: 1.5rem;
+  background: linear-gradient(to bottom right,rgb(50, 14, 87),rgb(75, 39, 138));
+  box-shadow: 0.3rem 0.3rem 2rem 0.1rem  rgb(100, 69, 150);
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15rem;
+}
+
+.topdiv {
+  margin: 5rem 0;
+}
+.topdiv a {
+  text-decoration: none;
+}
+
+.mycard {
+  background: linear-gradient(to bottom right,rgb(234, 226, 242),rgb(240, 239, 244));
+  color: rgb(39 31 80);
+  padding: 2rem;
+  margin: 3rem 0;
+  border-radius: 2rem;
+  border: 0.5px solid rgb(226, 217, 233);
+  box-shadow: 0.3rem 0.3rem 2rem 0.1rem  rgb(206, 198, 220);
+}
+.mycard:hover {
+  background: linear-gradient(to bottom right,rgb(227, 216, 240),rgb(240, 237, 244));
+}
+
+.popular-card {
+  background: linear-gradient(to bottom right,rgb(50, 14, 87),rgb(75, 39, 138));
+  color: rgb(243, 239, 246);
+  height: 13rem;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: 2rem;
+  border: 0.5px solid rgb(60, 52, 67);
+  box-shadow: 0.3rem 0.3rem 2rem 0.1rem  rgb(41, 15, 84);
+}
+
+.popular-card:hover {
+  background: linear-gradient(to bottom right,rgb(30, 5, 55),rgb(54, 25, 105));
+  color: rgb(243, 239, 246);
+  height: 13rem;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: 2rem;
+  border: 0.5px solid rgb(60, 52, 67);
+  box-shadow: 0.3rem 0.3rem 2rem 0.1rem  rgb(41, 15, 84);
+}
+
+.detail-card {
+  border: 3px solid rgb(0, 0, 0);
+  background: linear-gradient(to bottom right,rgb(242, 237, 247),rgb(246, 245, 249));
+  color: rgb(39 31 80);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 2rem;
+  border: 0.5px solid rgb(226, 217, 233);
+  box-shadow: 0.3rem 0.3rem 1.5rem 0.1rem  rgb(206, 198, 220);
+}
+
+.detail-box {
+  border: 3px solid rgb(0, 0, 0);
+  background: linear-gradient(to bottom right,rgb(251, 250, 252),rgb(248, 247, 251));
+  color: rgb(39 31 80);
+  padding: 1.5rem;
+  margin: 3rem 0;
+  border-radius: 2rem;
+  border: 0.5px solid rgb(226, 217, 233);
+  box-shadow: 0.3rem 0.3rem 1.5rem 0.1rem  rgb(206, 198, 220);
+}
+
+.myhits {
+  background-color: rgb(159, 127, 199);
+  color: rgb(252, 252, 252);
+  padding: 0.02rem 0.4rem 0.15rem;
+  border-radius: 2rem;
+  display: inline-block;
+  box-shadow: 0 0 0.5rem 0.05rem rgb(199, 183, 220);
+  font-size: 12px;
+}
+
+.detail-myhits {
+  background-color: rgb(159, 127, 199);
+  color: rgb(252, 252, 252);
+  padding: 0.02rem 0.4rem 0.15rem;
+  border-radius: 2rem;
+  display: inline-block;
+  box-shadow: 0 0 0.5rem 0.05rem rgb(199, 183, 220);
+  font-size: 15px;
+}
+
+.list-btn {
+  display: inline-block;
+  margin: 0 0.1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(159, 127, 199);
+  color: white;
+}
+
+.prev {
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.next {
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+}

@@ -7,5 +7,6 @@ class Movie(models.Model):
     content = models.TextField()
     movie_name = models.CharField(max_length=20, null=True)
     grade = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(5)], help_text="0~5사이 값으로 입력하세요")
+    hits = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

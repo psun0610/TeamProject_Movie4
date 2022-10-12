@@ -3,14 +3,14 @@
 
 <div class="topdiv row">
   <section>
-    <h1 class="mt-5 fs-2 fw-bold">인기글</h1>
+    <h1 class="mt-5 fs-3 fw-bold">인기글</h1>
     <div class="row">
       {% for popular in populars %}
       <a href="{% url 'movies:detail' popular.pk %}" class="col-4">
         <div class="popular-card d-flex flex-column justify-content-between">
           <div>
-            <h1 class="fs-3 fw-bold">{{ popular.movie_name }}</h1>
-            <h2 class="fs-5">{{ popular.title }}</h2>
+            <h1 class="fs-5 fw-bold">{{ popular.movie_name }}</h1>
+            <h2 style="font-size: 1rem;">{{ popular.title }}</h2>
           </div>
           <div>
             <div class="myhits">
@@ -28,10 +28,10 @@
   <article class="col-9">
     {% for movie in movies %}
       <a href="{% url 'movies:detail' movie.pk %}">
-        <div class="mycard d-flex justify-content-between">
+        <div class="mycard d-flex justify-content-between mt-4">
           <div>
-            <h1 class="fs-3 fw-bold">{{ movie.movie_name }}</h1>
-            <h2 class="fs-5">{{ movie.title }}</h2>
+            <h1 class="fs-5 fw-bold">{{ movie.movie_name }}</h1>
+            <h2 style="font-size: 1rem;">{{ movie.title }}</h2>
             <div class="myhits">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                 <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -40,13 +40,13 @@
             </div>
           </div>
           <div>
-            <p>{{ movie.created_at|date:'Y-m-d A f' }}</p>
+            <p style="font-size: 0.9rem;">{{ movie.created_at|date:'Y-m-d A f' }}</p>
           </div>
         </div>
       </a>
     {% endfor %}
   </article>
-  <aside class="col-3 my-5">
+  <aside class="col-3 my-4">
     <div class="sticky-top">
       <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=CT3hqeLY_Y6vRKPW_vcAP1Z-2mAan0c7VbNTrmbOyENnZHhABIIOb02lgm8PphKQpoAHwxPP-AsgBAqkCFQI9gzp6CD7gAgCoAwHIAwiqBIICT9CBIID1Ee7QXwrBSwG4pIouC93wnT8TFqc8sk2xM-PUNjyyZCnwTT7u0aH824lVf540iONlgBVTEErjwLmCnMF_8n5JjNosf45qG6Q8uBoulAUW6SGa6xxEQ9sZVtgw38HmM3WV8WcKbOLvkApFxUXEgj0N9a85g23iUk0HmkqRwyoDcSIe-X0pynNTaWYhP-xpSRHT_JSlOaNu5qhceqx39NswcvnnPhdrhGWGPbz4zcymMYakPpRe3gE7z6G-gALjCEdgF-gfATuUkSuxScOAgTCRVuvXCXheli0kh5lWTXlfwIaKbegq_5QEAhi8SvSLcr4E4PdHh5HrgsTpNqDkwAS9oqykhwTgBAGQBgGgBgKAB_i6jIEBiAcBkAcCqAeOzhuoB5PYG6gH7paxAqgH_p6xAqgHpKOxAqgH1ckbqAemvhuoB5oGqAfz0RuoB5bYG6gHqpuxAqgH35-xAtgHAdIIEggAEAIYHTIBADoHn8CAgICABPIIG2FkeC1zdWJzeW4tNjY2Nzc4NDQ5MzgyNjkyNLEJ-P6Rgumcdy2ACgOYCwHICwG4DAHYEwzQFQH4FgGAFwE&ae=1&num=1&cid=CAMSeQClSFh3hYhopXm6lh43kCzq9XmnyX59hvZEccOAaBGDq0AWrULlIBalqt4ZOSjcE5ud0S51U07ByQq2l1CoSs0MNse3HA7SdPB1Z0VIoUgLWHOmgywH8jr8x4ndIhBKOVYm-2f_TGNYlvBPaqlLUf7jrYjLjwdEyQc&sig=AOD64_27pckDysjtpLWhZPqrqoMOt2ZOQw&client=ca-pub-5781531207509232&nx=CLICK_X&ny=CLICK_Y&uap=UACH(platform)&uapv=UACH(platformVersion)&uaa=UACH(architecture)&uam=UACH(model)&uafv=UACH(uaFullVersion)&uab=UACH(bitness)&uaw=UACH(wow64)&uafvl=UACH(fullVersionList)&nb=2&adurl=https://school.programmers.co.kr/learn/courses/14966%3Futm_source%3Dgoogle%26utm_medium%3Dbanner%26utm_campaign%3Dschool_14966_re_prgms%26utm_content%3D14966_img01%26gclid%3DCj0KCQjw-fmZBhDtARIsAH6H8qjr4Y9VklPu7lAV5AZKh5CQA_WrShPY7NYTJy1KDVaAkTDchG_yGdkaAucFEALw_wcB">
         <img style="width: 100%" src="https://tpc.googlesyndication.com/simgad/6445466666655602025?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qldilFcBthvciuQQXm8r9CpQnWZfg">

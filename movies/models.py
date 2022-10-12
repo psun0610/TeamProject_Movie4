@@ -10,3 +10,4 @@ class Movie(models.Model):
     hits = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    writer = models.CharField(max_length=20, null=True)

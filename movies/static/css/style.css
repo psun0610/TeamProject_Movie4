@@ -14,7 +14,7 @@
 }
 
 .logo {
-font-size: 10rem;
+font-size: 8rem;
 font-weight: 900;
 color: rgb(19, 7, 55);
 margin: 0;
@@ -29,7 +29,7 @@ margin: 0;
   background: linear-gradient(to bottom right,rgb(50, 14, 87),rgb(75, 39, 138));
   box-shadow: 0.3rem 0.3rem 2rem 0.1rem  rgb(100, 69, 150);
   border-radius: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: white;
 }

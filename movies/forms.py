@@ -5,4 +5,4 @@ class MovieForm(forms.ModelForm):
 
     class Meta:
         model = Movie
-        exclude = ('hits',)
+        exclude = ('hits', 'writer')

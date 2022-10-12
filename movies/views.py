@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Movie
 from .forms import MovieForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import get_user_model
 
 # Create your views here.
 def index(request):
@@ -13,11 +15,13 @@ def index(request):
     return render(request, "movies/index.html", context)
 
 
+@login_required
 def create(request):
     if request.method == "POST":
         movie_form = MovieForm(request.POST)
         if movie_form.is_valid():
             movie_form.save()
+            
             return redirect("movies:index")
     else:
         movie_form = MovieForm()

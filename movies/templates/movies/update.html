@@ -2,7 +2,7 @@
 {% load django_bootstrap5 %}
 {% block body %}
 
-  <form action="" method="POST">
+  <form action="" method="POST" class="mt-5">
     {% csrf_token %}
     {% bootstrap_form movie_form %}
     {% bootstrap_button button_type="submit" content="OK" %}

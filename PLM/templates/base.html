@@ -21,14 +21,31 @@
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav justify-content-between">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{% url 'movies:index' %}">리뷰 목록</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'movies:create' %}">리뷰 작성</a>
           </li>
+        </ul>
+        <ul class="navbar-nav justify-content-between">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <p class="nav-link active m-0">{{ request.user }}님 반갑습니당💜</p>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:logout' %}">로그아웃</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:signup' %}">회원가입</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:login' %}">로그인</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
     </div>

@@ -1,6 +1,6 @@
 # 영화 리뷰 커뮤니티 TeamProject
 
-![gif](https://raw.githubusercontent.com/psun0610/Image-upload/image/img/gif.gif)
+![examplegif](https://raw.githubusercontent.com/psun0610/Image-upload/image/img/gif.gif)
 
 ## 프로젝트 소개
 
